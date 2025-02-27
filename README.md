@@ -4,51 +4,62 @@
 
 ## Introduction
 <details>
-   <summary><strong>📌 Overview   (click)</strong></summary>
-   
-   ### Overview
-This Power BI project provides a detailed analysis of Lorem Ipsum Group's performance, covering revenue, occupancy rates, booking trends. The analysis aims to uncover insights across various properties and cities, offering data-driven recommendations to enhance revenue generation, optimize occupancy, and improve overall operational efficiency
+   <summary><strong>📌 Overview (click)</strong></summary>
+
+ ### **Overview**  
+> This Power BI project provides a detailed analysis of **Lorem Ipsum Group's** performance, covering **revenue**, **occupancy rates**, and **booking trends**.  
+> The analysis aims to uncover **insights** across various **properties and cities**, offering **data-driven recommendations** to **enhance revenue generation**, **optimize occupancy**, and **improve overall operational efficiency**.  
+
 </details>
+
 
 <details>
-   <summary><strong>📂 Data Sources   (click)</strong></summary>
+   <summary><strong>📂 Data Sources (click)</strong></summary>
+
+### **Data Sources**  
+> The primary dataset used for this analysis is the **"fact_bookings.csv"** file containing detailed information about each booking made by the customers.  
+
+**▼ 📑Dataset Files Explanation** [[Download]](https://raw.githubusercontent.com/ibrahim-saiied/Hotel-Hospitality-Analysis/refs/heads/main/Data%20Set.rar)  
+
+1. **Dim_date File**  
+   > - **<ins>date</ins>**: Represents the dates present in **May, June, and July**.  
+   > - **<ins>mmm yy</ins>**: Shows the date in the **"mmm yy"** format.  
+
+2. **Dim_hotels File**  
+   > - **<ins>property_id</ins>**: Unique ID for each **hotel**.  
+   > - **<ins>property_name</ins>**: Name of each **hotel**.  
+   > - **<ins>category</ins>**: Defines which **class** (**Luxury**, **Business**) a **property** belongs to.  
+   > - **<ins>city</ins>**: The **location** of the **hotel/property**.  
+
+3. **Dim_rooms File**  
+   > - **<ins>room_id</ins>**: Represents the **type of room** (**RT1**, **RT2**, **RT3**, **RT4**) in a **hotel**.  
+   > - **<ins>room_class</ins>**: Indicates to which **class** (**Standard**, **Elite**, **Premium**, **Presidential**) the **room type** belongs.  
+
+4. **Fact_aggregated_bookings File**  
+   > - **<ins>property_id</ins>**: Unique ID for each **hotel**.  
+   > - **<ins>check_in_date</ins>**: All the **check-in dates** of the **customers**.  
+   > - **<ins>room_category</ins>**: Type of **room** (**RT1**, **RT2**, **RT3**, **RT4**) in a **hotel**.  
+   > - **<ins>successful_bookings</ins>**: All the **successful room bookings** for a particular **room type** on a **specific date**.  
+   > - **<ins>capacity</ins>**: Maximum **rooms available** for a particular **room type** on a **specific date**.  
+
+5. **Fact_bookings File**  
+   > - **<ins>booking_id</ins>**: Unique **Booking ID** for each **customer** when booking **rooms**.  
+   > - **<ins>property_id</ins>**: Unique ID for each **hotel**.  
+   > - **<ins>booking_date</ins>**: Date of **room booking** by the **customer**.  
+   > - **<ins>check_in_date</ins>**: Date of **check-in** at the **hotel**.  
+   > - **<ins>check_out_date</ins>**: Date of **check-out** from the **hotel**.  
+   > - **<ins>no_guests</ins>**: Number of **guests** who **stayed** in a **room**.  
+   > - **<ins>room_category</ins>**: Type of **room** (**RT1**, **RT2**, **RT3**, **RT4**) in a **hotel**.  
+   > - **<ins>booking_platform</ins>**: The **platform** used by the **customer** to **book the room**.  
+   > - **<ins>ratings_given</ins>**: **Ratings** provided by the **customer** for **hotel services**.  
+   > - **<ins>booking_status</ins>**: Indicates whether the **customer** **Cancelled**, **Checked Out**, or **No Show**.  
+   > - **<ins>revenue_generated</ins>**: **Amount of money generated** by the **hotel** from the **customer**.  
+   > - **<ins>revenue_realized</ins>**: **Final revenue** for the **hotel** based on **booking status**.  
+       - If **Cancelled**, **40%** is **refunded** to the **customer**.  
+       - If **Checked Out/No Show**, the **hotel** retains the **full amount**.
    
-### Data Sources
-The primary dataset used for this analysis is the "fact_bookings.csv" file containing detailed information about each booking made by the cusomers
-
-**▼  Dataset Files** [[Download]](https://raw.githubusercontent.com/ibrahim-saiied/Hotel-Hospitality-Analysis/refs/heads/main/Data%20Set.rar)
-1. Dim_date File
-   - <ins>date</ins> : This column represents the dates present in May, June and July.
-   - <ins>mmm yy</ins> : This column represents the date in the format of mmm yy.
-2. Dim_hotels File
-   - <ins>property_id</ins> : This column represents the Unique ID for each of the hotels.
-   - <ins>property_name</ins> : This column represents the name of each hotel.
-   - <ins>category</ins> : This column determines which class[Luxury, Business] a particular hotel/property belongs to.
-   - <ins>city</ins> : This column represents where the particular hotel/property resides in.
-3. Dim_rooms File
-   - <ins>room_id</ins> : This column represents the type of room[RT1, RT2, RT3, RT4] in a hotel.
-   - <ins>room_class</ins> : This column represents to which class[Standard, Elite, Premium, Presidential] particular room type belongs.
-
-4. Fact_aggregated_bookings File
-   - <ins>property_id</ins> : This column represents the Unique ID for each of the hotels.
-   - <ins>check_in_date</ins> : This column represents all the check_in_dates of the customers.
-   - <ins>room_category</ins> : This column represents the type of room[RT1, RT2, RT3, RT4] in a hotel.
-   - <ins>successful_bookings</ins> : This column represents all the successful room bookings that happen for a particular room type in that hotel on that particular date.
-   - <ins>capacity</ins> : This column represents the maximum count of rooms available for a particular room type in that hotel on that particular date.
-5. Fact_bookings File
-   - <ins>booking_id</ins> : This column represents the Unique Booking ID for each customer when they booked their rooms.
-   - <ins>property_id</ins> : This column represents the Unique ID for each of the hotels
-   - <ins>booking_date</ins> : This column represents the date on which the customer booked their rooms.
-   - <ins>check_in_date</ins> : This column represents the date on which the customer check-in(entered) at the hotel.
-   - <ins>check_out_date</ins> : This column represents the date on which the customer check-out(left) of the hotel.
-   - <ins>no_guests</ins> : This column represents the number of guests who stayed in a particular room in that hotel.
-   - <ins>room_category</ins> : This column represents the type of room[RT1, RT2, RT3, RT4] in a hotel.
-   - <ins>booking_platform</ins> : This column represents in which way the customer booked his room.
-   - <ins>ratings_given</ins> : This column represents the ratings given by the customer for hotel services.
-   - <ins>booking_status</ins> : This column shows whether the customer cancelled their booking [Cancelled], completed their stay [Checked Out], or did not show up [No show].
-   - <ins>revenue_generated</ins> : This column represents the amount of money generated by the hotel from a particular customer.
-   - <ins>revenue_realized</ins> : This column shows the final revenue for the hotel based on the booking status. If cancelled, 40% is refunded to the customer; if Checked Out/No show, the hotel keeps the full amount.
 </details>
+
 
 ## Case Study
 Lorem Ipsum Group owns multiple hotels across Egypt. Due to strategic moves from other competitors and ineffective decision-making, Lorem Ipsum are losing its market share.
