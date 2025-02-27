@@ -63,7 +63,7 @@ They need to provide them insights from their historical data and Create a dashb
 
 ## Measures
 ;
-<img src="https://github.com/user-attachments/assets/cb3a363e-c8ab-48dd-927b-0d9092c9ef8f" alt="image" width="30%" height="50%" style="display: block; margin: 0;">
+<img src="https://github.com/user-attachments/assets/cb3a363e-c8ab-48dd-927b-0d9092c9ef8f" alt="image" width="175" height="320" style="display: block; margin: 0;">
 
 ## Data Model
 ![image](https://github.com/user-attachments/assets/05a73c82-d1ea-44e2-bda2-58739c0c8f91)
