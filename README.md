@@ -2,6 +2,10 @@
 
 ### Link to [Interactive Dashboard](https://www.novypro.com/profile_about/ibrahim-saiied-1?Popup=memberProject&Data=1740543412374x486468345160050240)
 
+<img src="https://github.com/user-attachments/assets/b8cbeeef-942f-4db5-b781-a95d160fa329" alt="image" width="500" height="500" style="display: block; margin: 0;">
+
+
+
 ## Introduction
 <details>
    <summary><strong>📌 Overview (click)</strong></summary>
