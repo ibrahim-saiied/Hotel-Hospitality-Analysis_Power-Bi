@@ -1,6 +1,7 @@
 # Hotel Hospitality Analysis
 
 ### Link to [Interactive Dashboard on novyPro](https://www.novypro.com/profile_about/ibrahim-saiied-1?Popup=memberProject&Data=1740543412374x486468345160050240) 
+### Link to [Linked In](https://www.linkedin.com/in/ibrahim-saiied-data-analyst/) 
 
 <div align="center">
     <img src="https://github.com/user-attachments/assets/b8cbeeef-942f-4db5-b781-a95d160fa329" alt="image" width="400" height="400">
